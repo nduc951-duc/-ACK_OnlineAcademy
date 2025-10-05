@@ -1,0 +1,33 @@
+<div class="card">
+  <h5 class="card-header">Đăng Ký Tài Khoản</h5>
+    {{#if success}}
+        <div class="alert alert-success m-3" role="alert">
+        Đăng ký thành công. Vui lòng chuyển đến trang đăng nhập.
+        </div>
+    {{/if}}
+  <div class="card-body">
+    <form id="frmSignup" method="post">
+      {{!-- Action của form sẽ là POST đến trang hiện tại --}}
+
+      <div class="mb-3">
+        <label for="txtName" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" id="txtName" name="full_name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="txtEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="txtEmail" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="txtPassword" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="txtPassword" name="password" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-person-fill-add"></i>
+        Đăng ký
+      </button>
+    </form>
+  </div>
+</div>

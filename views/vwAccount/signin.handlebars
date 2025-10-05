@@ -1,0 +1,26 @@
+<div class="card">
+  <h5 class="card-header">Đăng Nhập</h5>
+  <div class="card-body">
+
+    {{#if error}}
+      <div class="alert alert-danger" role="alert">
+        Email hoặc mật khẩu không đúng.
+      </div>
+    {{/if}}
+
+    <form method="post">
+      <div class="mb-3">
+        <label for="txtEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="txtEmail" name="email" required autofocus>
+      </div>
+      <div class="mb-3">
+        <label for="txtPassword" class="form-label">Mật khẩu</label>
+        <input type="password" class="form-control" id="txtPassword" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-box-arrow-in-right"></i>
+        Đăng nhập
+      </button>
+    </form>
+  </div>
+</div>
